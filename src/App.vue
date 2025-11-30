@@ -6,47 +6,47 @@
         @logout="handleLogout"
         v-if="isAuthenticated && user"
       />
-      <v-container fluid>
+      <v-container
+        fluid
+        class="flex flex-col flex-1 h-full wrapper-v-container"
+      >
         <div
-          class="w-[200px] flex items-center justify-center mx-auto min-h-screen"
+          class="w-[200px] flex items-center justify-center mx-auto h-full"
           v-if="isLoading"
         >
           <AnimationGenerator :jsonData="loadingAnimation" />
         </div>
 
-        <div
-          v-else-if="error"
-          class="flex items-center justify-center min-h-screen"
-        >
+        <div v-else-if="error" class="flex items-center justify-center h-full">
           <div class="text-center max-w-md p-6">
-            <div class="text-3xl font-bold text-red-600 mb-2">
+            <div class="text-3xl font-bold mb-2">
               {{ LABELS.ERROR_TITLE }}
             </div>
-            <div class="text-lg text-gray-700 mb-2">
+            <div class="text-lg mb-2">
               {{ LABELS.ERROR_MESSAGE }}
             </div>
-            <div class="text-sm text-gray-500">{{ error.message }}</div>
+            <div class="text-sm">{{ error.message }}</div>
           </div>
         </div>
 
         <div
           v-else-if="!isAuthenticated"
-          class="flex flex-col gap-4 text-center max-w-2xl w-full mx-auto items-center justify-center min-h-screen"
+          class="flex flex-col gap-4 text-center max-w-2xl w-full mx-auto items-center justify-center h-full"
         >
           <div class="mb-3">
-            <img src="/favicons/apple-icon-180x180.png" alt="App Icon" />
+            <img
+              src="/favicons/apple-icon-114x114.png"
+              alt="App Icon"
+              width="114"
+              height="114"
+            />
           </div>
-          <h1 class="text-4xl font-bold text-gray-800">
+          <h1 class="text-4xl font-bold">
             {{ LABELS.WELCOME_TITLE }}
           </h1>
-          <p class="text-xl text-gray-600">{{ APP.DESCRIPTION }}</p>
+          <p class="text-xl">{{ APP.DESCRIPTION }}</p>
           <div class="mt-4">
-            <v-btn
-              @click="handleLogin"
-              color="primary"
-              size="large"
-              prepend-icon="mdi-login"
-            >
+            <v-btn @click="handleLogin" size="large" prepend-icon="mdi-login">
               {{ LABELS.BUTTON_LOGIN_TITLE }}
             </v-btn>
           </div>

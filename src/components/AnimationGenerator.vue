@@ -33,7 +33,7 @@ const errorMessage = computed(() =>
     ? errors.invalidJSON?.message
     : errors.missingData?.status
       ? errors.missingData?.message
-      : "",
+      : ""
 );
 
 const setAnimationRefData = (): void => {
@@ -72,7 +72,7 @@ onMounted(() => {
   <div v-if="!isNilOrEmpty(errorMessage)">{{ errorMessage }}</div>
   <div
     class="loading-container"
-    v-if="!isNilOrEmpty(animationRefData) && animationRefData !== null"
+    v-else-if="!isNilOrEmpty(animationRefData) && animationRefData !== null"
   >
     <LottieAnimation
       :animation-data="animationRefData"

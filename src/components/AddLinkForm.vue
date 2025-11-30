@@ -1,72 +1,83 @@
 <template>
-  <v-card class="w-full" :loading="loading">
-    <v-card-title>{{ LABELS.ADD_LINK_TITLE }}</v-card-title>
-    <v-card-text>
-      <v-form ref="formRef" v-model="valid" @submit.prevent="handleSubmit">
-        <v-text-field
-          v-model="formData.url"
-          :label="LABELS.URL_LABEL"
-          :rules="urlRules"
-          :placeholder="LABELS.URL_PLACEHOLDER"
-          prepend-inner-icon="mdi-link"
-          variant="outlined"
-          required
-          class="mb-4"
-        ></v-text-field>
+  <v-container class="add-link-container">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-4xl font-bold text-center mb-8">
+        {{ LABELS.ADD_LINK_TITLE }}
+      </h1>
 
-        <v-text-field
-          v-model="formData.shortCode"
-          :label="LABELS.SHORT_CODE_LABEL"
-          :rules="shortCodeRules"
-          :placeholder="LABELS.SHORT_CODE_PLACEHOLDER"
-          prepend-inner-icon="mdi-link-variant"
-          variant="outlined"
-          :hint="LABELS.SHORT_CODE_HINT"
-          persistent-hint
-        ></v-text-field>
-      </v-form>
-    </v-card-text>
-
-    <v-card-actions class="pa-4 flex flex-col gap-4 w-full">
-      <div class="flex flex-row justify-end w-full">
-        <v-btn
-          variant="text"
-          prepend-icon="mdi-arrow-left"
-          @click="handleGoBack"
-          :disabled="loading"
-        >
-          {{ LABELS.GO_BACK }}
-        </v-btn>
-        <v-btn variant="outlined" @click="handleReset" :disabled="loading">
-          {{ LABELS.CANCEL }}
-        </v-btn>
-        <v-btn
-          color="primary"
-          :loading="loading"
-          :disabled="!valid"
-          @click="handleSubmit"
-          prepend-icon="mdi-plus"
-        >
-          {{ LABELS.ADD_LINK }}
-        </v-btn>
-      </div>
-
-      <div
-        v-if="!isNilOrEmpty(linkCreationStatus) && linkCreationStatus.display"
-        class="w-full mt-4"
+      <v-btn
+        variant="text"
+        prepend-icon="mdi-arrow-left"
+        @click="goBack"
+        class="mb-4"
+        :disabled="loading"
       >
-        <v-alert
-          :icon="
-            linkCreationStatus.success
-              ? 'mdi-check-circle'
-              : 'mdi-alert-circle-outline'
-          "
-          :text="linkCreationStatus.message as string"
-          :type="linkCreationStatus.success ? 'success' : 'error'"
-        />
-      </div>
-    </v-card-actions>
-  </v-card>
+        {{ LABELS.BACK_TO_DASHBOARD }}
+      </v-btn>
+
+      <v-card class="w-full" :loading="loading">
+        <v-card-text>
+          <v-form ref="formRef" v-model="valid" @submit.prevent="handleSubmit">
+            <v-text-field
+              v-model="formData.url"
+              :label="LABELS.URL_LABEL"
+              :rules="urlRules"
+              :placeholder="LABELS.URL_PLACEHOLDER"
+              prepend-inner-icon="mdi-link"
+              variant="outlined"
+              required
+              class="mb-4"
+            ></v-text-field>
+
+            <v-text-field
+              v-model="formData.shortCode"
+              :label="LABELS.SHORT_CODE_LABEL"
+              :rules="shortCodeRules"
+              :placeholder="LABELS.SHORT_CODE_PLACEHOLDER"
+              prepend-inner-icon="mdi-link-variant"
+              variant="outlined"
+              :hint="LABELS.SHORT_CODE_HINT"
+              persistent-hint
+            ></v-text-field>
+          </v-form>
+        </v-card-text>
+
+        <v-card-actions class="pa-4 flex flex-col gap-4 w-full">
+          <div class="flex flex-row justify-end w-full">
+            <v-btn variant="outlined" @click="handleReset" :disabled="loading">
+              {{ LABELS.CANCEL }}
+            </v-btn>
+            <v-btn
+              class="ml-4"
+              :loading="loading"
+              :disabled="!valid"
+              @click="handleSubmit"
+              prepend-icon="mdi-plus"
+            >
+              {{ LABELS.ADD_LINK }}
+            </v-btn>
+          </div>
+
+          <div
+            v-if="
+              !isNilOrEmpty(linkCreationStatus) && linkCreationStatus.display
+            "
+            class="w-full mt-4"
+          >
+            <v-alert
+              :icon="
+                linkCreationStatus.success
+                  ? 'mdi-check-circle'
+                  : 'mdi-alert-circle-outline'
+              "
+              :text="linkCreationStatus.message as string"
+              :type="linkCreationStatus.success ? 'success' : 'error'"
+            />
+          </div>
+        </v-card-actions>
+      </v-card>
+    </div>
+  </v-container>
 </template>
 
 <script setup lang="ts">
@@ -181,15 +192,15 @@ const handleSubmit = async () => {
   }
 };
 
+const goBack = () => {
+  router.push({ path: "/" });
+};
+
 const handleReset = () => {
   formData.value = {
     url: "",
     shortCode: "",
   };
   formRef.value?.reset();
-};
-
-const handleGoBack = () => {
-  router.back();
 };
 </script>

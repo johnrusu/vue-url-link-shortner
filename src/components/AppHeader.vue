@@ -1,34 +1,72 @@
 <template>
-  <v-app-bar v-if="!isNilOrEmpty(user)" color="primary" elevation="2">
-    <v-app-bar-title>
-      <router-link
-        to="/"
-        class="text-white no-underline"
-        :disabled="isDisabled"
-      >
-        {{ APP.TITLE }}
-      </router-link>
-      <v-btn
-        variant="text"
-        prepend-icon="mdi-information"
-        color="white"
-        to="/about"
-        :disabled="isDisabled"
-        class="ml-4 mr-4"
-      >
-        {{ LABELS.ABOUT }}
+  <v-app-bar v-if="!isNilOrEmpty(user)" elevation="2">
+    <template v-slot:prepend>
+      <v-app-bar-nav-icon>
+        <router-link
+          to="/"
+          class="text-white no-underline cursor-pointer"
+          :disabled="isDisabled"
+        >
+          <img
+            src="/favicons/favicon-32x32.png"
+            :alt="APP.TITLE"
+            width="32"
+            height="32"
+          />
+        </router-link>
+      </v-app-bar-nav-icon>
+      <div class="flex gap-2 ml-2" v-if="!xs">
+        <v-btn
+          variant="text"
+          prepend-icon="mdi-plus"
+          color="white"
+          to="/add-link"
+          :disabled="isDisabled"
+        >
+          {{ LABELS.ADD_LINK }}
+        </v-btn>
+        <v-btn
+          variant="text"
+          prepend-icon="mdi-information"
+          color="white"
+          to="/about"
+          :disabled="isDisabled"
+        >
+          {{ LABELS.ABOUT }}
+        </v-btn>
+      </div>
+      <v-btn v-if="xs">
+        <v-icon>mdi-dots-vertical</v-icon>
+        <v-menu class="hidden-md-and-up" activator="parent">
+          <v-list>
+            <v-list-item>
+              <v-btn
+                variant="text"
+                prepend-icon="mdi-plus"
+                color="white"
+                to="/add-link"
+                :disabled="isDisabled"
+                class="w-full"
+              >
+                {{ LABELS.ADD_LINK }}
+              </v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn
+                variant="text"
+                prepend-icon="mdi-information"
+                color="white"
+                to="/about"
+                :disabled="isDisabled"
+                class="w-full"
+              >
+                {{ LABELS.ABOUT }}
+              </v-btn>
+            </v-list-item>
+          </v-list>
+        </v-menu>
       </v-btn>
-      <v-btn
-        variant="text"
-        prepend-icon="mdi-plus"
-        color="white"
-        to="/add-link"
-        :disabled="isDisabled"
-        v-if="currentUrl.includes('add-link') === false"
-      >
-        {{ LABELS.ADD_LINK }}
-      </v-btn>
-    </v-app-bar-title>
+    </template>
 
     <template #append>
       <v-menu location="bottom">
@@ -48,8 +86,8 @@
             <div class="flex flex-col gap-4 items-center text-center">
               <v-avatar size="64" :image="imageSrc"></v-avatar>
               <div>
-                <p class="font-semibold text-gray-800">{{ user?.name }}</p>
-                <p class="text-sm text-gray-500">{{ user?.email }}</p>
+                <p class="font-semibold">{{ user?.name }}</p>
+                <p class="text-small">{{ user?.email }}</p>
               </div>
             </div>
           </v-card-text>
@@ -73,15 +111,8 @@
 </template>
 
 <script setup lang="ts">
-import {
-  computed,
-  onMounted,
-  ref,
-  type ComputedRef,
-  type Ref,
-  watch,
-} from "vue";
-import { useRoute } from "vue-router";
+import { computed, onMounted, ref, type ComputedRef, type Ref } from "vue";
+import { useDisplay } from "vuetify";
 
 // utils
 import { isNilOrEmpty, checkImage } from "@/utils";
@@ -106,19 +137,9 @@ const props = defineProps<{
 const emit = defineEmits<{
   (e: "logout"): void;
 }>();
-
-const route = useRoute();
+const { xs } = useDisplay();
 const user: ComputedRef<TUser | undefined> = computed(() => props.user);
 const imageSrc: Ref<string> = ref(PLACEHOLDER_IMAGE);
-const currentUrl = ref<string>(window.location.href);
-
-// Watch for route changes
-watch(
-  () => route.path,
-  () => {
-    currentUrl.value = window.location.href;
-  }
-);
 
 onMounted(() => {
   if (!isNilOrEmpty(user.value?.picture)) {

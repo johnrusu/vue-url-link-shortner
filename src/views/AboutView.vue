@@ -1,6 +1,6 @@
 <template>
-  <v-container class="about-container py-8">
-    <div class="max-w-4xl mx-auto">
+  <v-container class="about-container">
+    <div class="max-w-6xl mx-auto">
       <h1 class="text-4xl font-bold text-center mb-8">
         {{ ABOUT_PAGE.TITLE }}
       </h1>
@@ -134,7 +134,7 @@
             <p class="text-xl font-semibold mb-2">
               {{ ABOUT_PAGE.DEVELOPER.NAME }}
             </p>
-            <p class="text-gray-400 mb-4">{{ ABOUT_PAGE.DEVELOPER.ROLE }}</p>
+            <p class="mb-4">{{ ABOUT_PAGE.DEVELOPER.ROLE }}</p>
           </div>
           <p class="mb-4">
             {{ ABOUT_PAGE.DEVELOPER.BIO_1 }}
@@ -171,7 +171,7 @@
         </v-card-text>
       </v-card>
 
-      <v-card class="mb-6">
+      <v-card>
         <v-card-text class="pa-6 text-center">
           <h2 class="text-2xl font-semibold mb-4">
             {{ ABOUT_PAGE.CONTACT.TITLE }}
@@ -197,9 +197,3 @@
 <script setup lang="ts">
 import { ABOUT_PAGE } from "@/constants";
 </script>
-
-<style scoped>
-.about-container {
-  min-height: 70vh;
-}
-</style>

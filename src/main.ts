@@ -11,6 +11,10 @@ import { createVuetify } from "vuetify";
 import App from "./App.vue";
 
 const vuetify = createVuetify({
+  theme: {
+    defaultTheme: "dark",
+    //
+  },
   icons: {
     defaultSet: "mdi",
   },
@@ -29,7 +33,7 @@ app.use(
     },
     cacheLocation: "localstorage",
     useRefreshTokens: true,
-  }),
+  })
 );
 
 app.use(createPinia());

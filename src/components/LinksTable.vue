@@ -1,74 +1,86 @@
 <template>
-  <div class="w-full h-full flex">
+  <v-container class="links-table-container">
     <div
-      class="w-[200px] flex items-center justify-center mx-auto min-h-screen"
+      class="w-[200px] flex items-center justify-center mx-auto h-full"
       v-if="loading"
     >
       <AnimationGenerator :jsonData="loadingAnimation" />
     </div>
 
-    <div
-      v-else-if="error"
-      class="flex items-center justify-center min-h-screen w-full"
-    >
-      <div class="text-center max-w-md p-6">
-        <v-icon size="120" color="error" class="mb-4">
-          mdi-battery-outline
-        </v-icon>
-        <div class="text-sm text-gray-500">{{ error }}</div>
+    <div class="max-w-6xl mx-auto h-full" v-else>
+      <div class="w-full h-full flex">
+        <div
+          v-if="error"
+          class="h-full w-full flex items-center justify-center"
+        >
+          <div class="text-center max-w-md p-6">
+            <v-icon size="120" color="error" class="mb-4">
+              mdi-battery-outline
+            </v-icon>
+            <div class="text-sm">{{ error }}</div>
+          </div>
+        </div>
+        <div v-else class="w-full">
+          <h1 class="text-4xl font-bold text-center mb-8">
+            {{ LABELS.LINKS_TABLE_TITLE }}
+          </h1>
+          <AddLinkForm @linkCreated="getLinks" v-if="!isArrayNotEmpty(links)" />
+          <v-card :loading="loading" class="w-full" v-else>
+            <v-data-table
+              :headers="[
+                ...linksIds.map((id) => ({
+                  title: (LINKS_MAPPING as any)[id] || id,
+                  key: id,
+                })),
+                ...(isArrayNotEmpty(links)
+                  ? [{ title: LABELS.ACTIONS, key: 'actions', sortable: false }]
+                  : []),
+              ]"
+              :items="links"
+            >
+              <template
+                v-slot:[`item.actions`]="{ item }"
+                v-if="isArrayNotEmpty(links)"
+              >
+                <div class="flex gap-2">
+                  <v-btn
+                    icon
+                    size="small"
+                    color="primary"
+                    @click="viewDetails(item)"
+                  >
+                    <v-icon>mdi-eye</v-icon>
+                  </v-btn>
+                  <v-btn
+                    icon
+                    size="small"
+                    color="error"
+                    @click="deleteLink(item)"
+                  >
+                    <v-icon>mdi-delete</v-icon>
+                  </v-btn>
+                </div>
+              </template>
+            </v-data-table>
+            <v-card-actions>
+              <div v-if="isArrayNotEmpty(links)">
+                <div class="d-flex pa-2">
+                  <v-btn
+                    color="error"
+                    variant="outlined"
+                    prepend-icon="mdi-delete-sweep"
+                    @click="deleteAllLinks"
+                  >
+                    {{ LABELS.DELETE_ALL_LINKS }}
+                  </v-btn>
+                </div>
+              </div>
+            </v-card-actions>
+          </v-card>
+        </div>
       </div>
     </div>
-    <div v-else class="w-full">
-      <AddLinkForm @linkCreated="getLinks" v-if="!isArrayNotEmpty(links)" />
-      <v-card
-        :loading="loading"
-        class="w-full"
-        :title="LABELS.LINKS_TABLE_TITLE"
-        v-else
-      >
-        <v-data-table
-          :headers="[
-            ...linksIds.map((id) => ({
-              title: (LINKS_MAPPING as any)[id] || id,
-              key: id,
-            })),
-            ...(isArrayNotEmpty(links)
-              ? [{ title: LABELS.ACTIONS, key: 'actions', sortable: false }]
-              : []),
-          ]"
-          :items="links"
-        >
-          <template
-            v-slot:[`item.actions`]="{ item }"
-            v-if="isArrayNotEmpty(links)"
-          >
-            <div class="flex gap-2">
-              <v-btn icon size="small" @click="viewDetails(item)">
-                <v-icon>mdi-eye</v-icon>
-              </v-btn>
-              <v-btn icon size="small" color="error" @click="deleteLink(item)">
-                <v-icon>mdi-delete</v-icon>
-              </v-btn>
-            </div>
-          </template>
-        </v-data-table>
-        <v-card-actions>
-          <div v-if="isArrayNotEmpty(links)">
-            <div class="d-flex pa-2">
-              <v-btn
-                color="error"
-                variant="outlined"
-                prepend-icon="mdi-delete-sweep"
-                @click="deleteAllLinks"
-              >
-                {{ LABELS.DELETE_ALL_LINKS }}
-              </v-btn>
-            </div>
-          </div>
-        </v-card-actions>
-      </v-card>
-    </div>
-  </div>
+  </v-container>
 </template>
 <script setup lang="ts">
 import { ref, watch } from "vue";
