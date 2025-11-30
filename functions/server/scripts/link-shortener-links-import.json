@@ -1,0 +1,702 @@
+[
+  {
+    "url": "https://www.github.com",
+    "shortCode": "gh",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-01T08:15:00.000Z",
+    "clicks": 245
+  },
+  {
+    "url": "https://www.stackoverflow.com",
+    "shortCode": "so",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-01T09:22:00.000Z",
+    "clicks": 189
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "shortCode": "yt1",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-02T10:30:00.000Z",
+    "clicks": 567
+  },
+  {
+    "url": "https://www.reddit.com/r/programming",
+    "shortCode": "rdp",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-02T11:45:00.000Z",
+    "clicks": 123
+  },
+  {
+    "url": "https://www.twitter.com",
+    "shortCode": "tw",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-03T12:15:00.000Z",
+    "clicks": 334
+  },
+  {
+    "url": "https://www.linkedin.com/jobs",
+    "shortCode": "lnkj",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-03T13:30:00.000Z",
+    "clicks": 456
+  },
+  {
+    "url": "https://www.medium.com/topic/technology",
+    "shortCode": "mdm",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-04T14:20:00.000Z",
+    "clicks": 78
+  },
+  {
+    "url": "https://www.dev.to",
+    "shortCode": "dev",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-04T15:10:00.000Z",
+    "clicks": 201
+  },
+  {
+    "url": "https://www.npmjs.com/package/vue",
+    "shortCode": "vue",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-05T16:00:00.000Z",
+    "clicks": 312
+  },
+  {
+    "url": "https://www.figma.com/design",
+    "shortCode": "fig",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-05T17:25:00.000Z",
+    "clicks": 145
+  },
+  {
+    "url": "https://www.dribbble.com",
+    "shortCode": "drb",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-06T08:40:00.000Z",
+    "clicks": 89
+  },
+  {
+    "url": "https://www.behance.net",
+    "shortCode": "bhn",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-06T09:55:00.000Z",
+    "clicks": 67
+  },
+  {
+    "url": "https://www.codepen.io",
+    "shortCode": "cpn",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-07T10:30:00.000Z",
+    "clicks": 234
+  },
+  {
+    "url": "https://www.netlify.com",
+    "shortCode": "ntfy",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-07T11:15:00.000Z",
+    "clicks": 178
+  },
+  {
+    "url": "https://www.vercel.com",
+    "shortCode": "vrcl",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-08T12:20:00.000Z",
+    "clicks": 456
+  },
+  {
+    "url": "https://www.docker.com",
+    "shortCode": "dckr",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-08T13:45:00.000Z",
+    "clicks": 289
+  },
+  {
+    "url": "https://www.kubernetes.io",
+    "shortCode": "k8s",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-09T14:30:00.000Z",
+    "clicks": 567
+  },
+  {
+    "url": "https://www.aws.amazon.com",
+    "shortCode": "aws",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-09T15:10:00.000Z",
+    "clicks": 890
+  },
+  {
+    "url": "https://www.azure.microsoft.com",
+    "shortCode": "azr",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-10T16:00:00.000Z",
+    "clicks": 654
+  },
+  {
+    "url": "https://www.cloud.google.com",
+    "shortCode": "gcp",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-10T17:25:00.000Z",
+    "clicks": 432
+  },
+  {
+    "url": "https://www.heroku.com",
+    "shortCode": "hrku",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-11T08:15:00.000Z",
+    "clicks": 123
+  },
+  {
+    "url": "https://www.digitalocean.com",
+    "shortCode": "do",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-11T09:30:00.000Z",
+    "clicks": 267
+  },
+  {
+    "url": "https://www.mongodb.com",
+    "shortCode": "mdb",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-12T10:45:00.000Z",
+    "clicks": 345
+  },
+  {
+    "url": "https://www.postgresql.org",
+    "shortCode": "psql",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-12T11:20:00.000Z",
+    "clicks": 198
+  },
+  {
+    "url": "https://www.mysql.com",
+    "shortCode": "mysql",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-13T12:35:00.000Z",
+    "clicks": 234
+  },
+  {
+    "url": "https://www.redis.io",
+    "shortCode": "rds",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-13T13:50:00.000Z",
+    "clicks": 156
+  },
+  {
+    "url": "https://www.elastic.co",
+    "shortCode": "elk",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-14T14:15:00.000Z",
+    "clicks": 89
+  },
+  {
+    "url": "https://www.grafana.com",
+    "shortCode": "graf",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-14T15:40:00.000Z",
+    "clicks": 112
+  },
+  {
+    "url": "https://www.prometheus.io",
+    "shortCode": "prom",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-15T16:20:00.000Z",
+    "clicks": 145
+  },
+  {
+    "url": "https://www.jenkins.io",
+    "shortCode": "jnks",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-15T17:05:00.000Z",
+    "clicks": 178
+  },
+  {
+    "url": "https://www.gitlab.com",
+    "shortCode": "gl",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-16T08:30:00.000Z",
+    "clicks": 456
+  },
+  {
+    "url": "https://www.bitbucket.org",
+    "shortCode": "bb",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-16T09:45:00.000Z",
+    "clicks": 234
+  },
+  {
+    "url": "https://www.jira.atlassian.com",
+    "shortCode": "jira",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-17T10:20:00.000Z",
+    "clicks": 567
+  },
+  {
+    "url": "https://www.trello.com",
+    "shortCode": "trlo",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-17T11:35:00.000Z",
+    "clicks": 345
+  },
+  {
+    "url": "https://www.asana.com",
+    "shortCode": "asn",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-18T12:50:00.000Z",
+    "clicks": 267
+  },
+  {
+    "url": "https://www.notion.so",
+    "shortCode": "ntn",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-18T13:15:00.000Z",
+    "clicks": 789
+  },
+  {
+    "url": "https://www.slack.com",
+    "shortCode": "slk",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-19T14:30:00.000Z",
+    "clicks": 890
+  },
+  {
+    "url": "https://www.discord.com",
+    "shortCode": "dsc",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-19T15:45:00.000Z",
+    "clicks": 654
+  },
+  {
+    "url": "https://www.teams.microsoft.com",
+    "shortCode": "mst",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-20T16:20:00.000Z",
+    "clicks": 432
+  },
+  {
+    "url": "https://www.zoom.us",
+    "shortCode": "zm",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-20T17:05:00.000Z",
+    "clicks": 567
+  },
+  {
+    "url": "https://www.google.com/meet",
+    "shortCode": "gmt",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-21T08:40:00.000Z",
+    "clicks": 345
+  },
+  {
+    "url": "https://www.webex.com",
+    "shortCode": "wbx",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-21T09:25:00.000Z",
+    "clicks": 234
+  },
+  {
+    "url": "https://www.spotify.com",
+    "shortCode": "sptfy",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-22T10:40:00.000Z",
+    "clicks": 1234
+  },
+  {
+    "url": "https://www.apple.com/music",
+    "shortCode": "apm",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-22T11:55:00.000Z",
+    "clicks": 890
+  },
+  {
+    "url": "https://www.netflix.com",
+    "shortCode": "nflx",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-23T12:30:00.000Z",
+    "clicks": 2345
+  },
+  {
+    "url": "https://www.primevideo.com",
+    "shortCode": "amzp",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-23T13:45:00.000Z",
+    "clicks": 1567
+  },
+  {
+    "url": "https://www.disneyplus.com",
+    "shortCode": "dsnp",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-24T14:20:00.000Z",
+    "clicks": 1234
+  },
+  {
+    "url": "https://www.hulu.com",
+    "shortCode": "hulu",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-24T15:35:00.000Z",
+    "clicks": 987
+  },
+  {
+    "url": "https://www.hbo.com",
+    "shortCode": "hbo",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-25T16:50:00.000Z",
+    "clicks": 765
+  },
+  {
+    "url": "https://www.twitch.tv",
+    "shortCode": "twtch",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-25T17:15:00.000Z",
+    "clicks": 2134
+  },
+  {
+    "url": "https://www.wikipedia.org",
+    "shortCode": "wiki",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-26T08:30:00.000Z",
+    "clicks": 3456
+  },
+  {
+    "url": "https://www.amazon.com",
+    "shortCode": "amz",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-26T09:45:00.000Z",
+    "clicks": 4567
+  },
+  {
+    "url": "https://www.ebay.com",
+    "shortCode": "eby",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-27T10:20:00.000Z",
+    "clicks": 2345
+  },
+  {
+    "url": "https://www.etsy.com",
+    "shortCode": "etsy",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-27T11:35:00.000Z",
+    "clicks": 1567
+  },
+  {
+    "url": "https://www.shopify.com",
+    "shortCode": "shpfy",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-28T12:50:00.000Z",
+    "clicks": 890
+  },
+  {
+    "url": "https://www.wordpress.org",
+    "shortCode": "wp",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-28T13:15:00.000Z",
+    "clicks": 1234
+  },
+  {
+    "url": "https://www.wix.com",
+    "shortCode": "wix",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-29T14:30:00.000Z",
+    "clicks": 678
+  },
+  {
+    "url": "https://www.squarespace.com",
+    "shortCode": "sqsp",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-29T15:45:00.000Z",
+    "clicks": 456
+  },
+  {
+    "url": "https://www.godaddy.com",
+    "shortCode": "gd",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-29T16:20:00.000Z",
+    "clicks": 345
+  },
+  {
+    "url": "https://www.namecheap.com",
+    "shortCode": "nchp",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-29T17:05:00.000Z",
+    "clicks": 234
+  },
+  {
+    "url": "https://www.cloudflare.com",
+    "shortCode": "cf",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-29T18:00:00.000Z",
+    "clicks": 567
+  },
+  {
+    "url": "https://www.stripe.com",
+    "shortCode": "strp",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-29T18:15:00.000Z",
+    "clicks": 789
+  },
+  {
+    "url": "https://www.paypal.com",
+    "shortCode": "pp",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-29T18:30:00.000Z",
+    "clicks": 2345
+  },
+  {
+    "url": "https://www.square.com",
+    "shortCode": "sq",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-29T18:45:00.000Z",
+    "clicks": 1234
+  },
+  {
+    "url": "https://www.mailchimp.com",
+    "shortCode": "mc",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-29T19:00:00.000Z",
+    "clicks": 890
+  },
+  {
+    "url": "https://www.sendgrid.com",
+    "shortCode": "sg",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-29T19:15:00.000Z",
+    "clicks": 567
+  },
+  {
+    "url": "https://www.hubspot.com",
+    "shortCode": "hs",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-29T19:30:00.000Z",
+    "clicks": 678
+  },
+  {
+    "url": "https://www.salesforce.com",
+    "shortCode": "sf",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-29T19:45:00.000Z",
+    "clicks": 1456
+  },
+  {
+    "url": "https://www.zendesk.com",
+    "shortCode": "zd",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-29T20:00:00.000Z",
+    "clicks": 789
+  },
+  {
+    "url": "https://www.intercom.com",
+    "shortCode": "ic",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-29T20:15:00.000Z",
+    "clicks": 456
+  },
+  {
+    "url": "https://www.freshdesk.com",
+    "shortCode": "fd",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-29T20:30:00.000Z",
+    "clicks": 345
+  },
+  {
+    "url": "https://www.zapier.com",
+    "shortCode": "zap",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-29T20:45:00.000Z",
+    "clicks": 890
+  },
+  {
+    "url": "https://www.ifttt.com",
+    "shortCode": "ift",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-29T21:00:00.000Z",
+    "clicks": 567
+  },
+  {
+    "url": "https://www.airtable.com",
+    "shortCode": "at",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-29T21:15:00.000Z",
+    "clicks": 789
+  },
+  {
+    "url": "https://www.monday.com",
+    "shortCode": "mon",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-29T21:30:00.000Z",
+    "clicks": 678
+  },
+  {
+    "url": "https://www.clickup.com",
+    "shortCode": "cu",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-29T21:45:00.000Z",
+    "clicks": 456
+  },
+  {
+    "url": "https://www.miro.com",
+    "shortCode": "miro",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-29T22:00:00.000Z",
+    "clicks": 345
+  },
+  {
+    "url": "https://www.canva.com",
+    "shortCode": "canv",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-29T22:15:00.000Z",
+    "clicks": 1234
+  },
+  {
+    "url": "https://www.adobe.com",
+    "shortCode": "adbe",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-29T22:30:00.000Z",
+    "clicks": 890
+  },
+  {
+    "url": "https://www.photoshop.com",
+    "shortCode": "ps",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-29T22:45:00.000Z",
+    "clicks": 1567
+  },
+  {
+    "url": "https://www.sketch.com",
+    "shortCode": "sktch",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-29T23:00:00.000Z",
+    "clicks": 456
+  },
+  {
+    "url": "https://www.invision.com",
+    "shortCode": "inv",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-29T23:15:00.000Z",
+    "clicks": 345
+  },
+  {
+    "url": "https://www.framer.com",
+    "shortCode": "frmr",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-29T23:30:00.000Z",
+    "clicks": 234
+  },
+  {
+    "url": "https://www.webflow.com",
+    "shortCode": "wf",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-29T23:45:00.000Z",
+    "clicks": 789
+  },
+  {
+    "url": "https://www.bubble.io",
+    "shortCode": "bbl",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-29T23:59:00.000Z",
+    "clicks": 567
+  },
+  {
+    "url": "https://www.retool.com",
+    "shortCode": "rtl",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-30T00:15:00.000Z",
+    "clicks": 456
+  },
+  {
+    "url": "https://www.postman.com",
+    "shortCode": "pm",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-30T00:30:00.000Z",
+    "clicks": 890
+  },
+  {
+    "url": "https://www.insomnia.rest",
+    "shortCode": "ins",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-30T00:45:00.000Z",
+    "clicks": 345
+  },
+  {
+    "url": "https://www.swagger.io",
+    "shortCode": "swg",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-30T01:00:00.000Z",
+    "clicks": 567
+  },
+  {
+    "url": "https://www.sentry.io",
+    "shortCode": "sntr",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-30T01:15:00.000Z",
+    "clicks": 678
+  },
+  {
+    "url": "https://www.datadog.com",
+    "shortCode": "dd",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-30T01:30:00.000Z",
+    "clicks": 789
+  },
+  {
+    "url": "https://www.newrelic.com",
+    "shortCode": "nr",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-30T01:45:00.000Z",
+    "clicks": 456
+  },
+  {
+    "url": "https://www.splunk.com",
+    "shortCode": "splk",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-30T02:00:00.000Z",
+    "clicks": 345
+  },
+  {
+    "url": "https://www.algolia.com",
+    "shortCode": "alg",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-30T02:15:00.000Z",
+    "clicks": 234
+  },
+  {
+    "url": "https://www.auth0.com",
+    "shortCode": "a0",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-30T02:30:00.000Z",
+    "clicks": 890
+  },
+  {
+    "url": "https://www.okta.com",
+    "shortCode": "okta",
+    "userId": "auth0|user001",
+    "createdAt": "2025-11-30T02:45:00.000Z",
+    "clicks": 567
+  },
+  {
+    "url": "https://www.supabase.com",
+    "shortCode": "sb",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-30T03:00:00.000Z",
+    "clicks": 1234
+  },
+  {
+    "url": "https://www.firebase.google.com",
+    "shortCode": "fb",
+    "userId": "auth0|user002",
+    "createdAt": "2025-11-30T03:15:00.000Z",
+    "clicks": 1567
+  },
+  {
+    "url": "https://www.planetscale.com",
+    "shortCode": "pscl",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-30T03:30:00.000Z",
+    "clicks": 678
+  },
+  {
+    "url": "https://www.railway.app",
+    "shortCode": "rlwy",
+    "userId": "auth0|user003",
+    "createdAt": "2025-11-30T03:45:00.000Z",
+    "clicks": 456
+  }
+]
