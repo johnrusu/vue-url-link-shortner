@@ -1,7 +1,7 @@
 <template>
   <v-container class="add-link-container">
     <div class="max-w-6xl mx-auto">
-      <h1 class="text-4xl font-bold text-center mb-8">
+      <h1 class="text-4xl font-bold text-center mb-4">
         {{ LABELS.ADD_LINK_TITLE }}
       </h1>
 

@@ -55,7 +55,7 @@
                       icon
                       color="primary"
                       @click="viewDetails(item)"
-                      density="comfortable"
+                      density="default"
                       size="small"
                     >
                       <v-icon>mdi-eye</v-icon>
@@ -64,7 +64,7 @@
                       icon
                       color="error"
                       @click="deleteLink(item)"
-                      density="comfortable"
+                      density="default"
                       size="small"
                     >
                       <v-icon>mdi-delete</v-icon>
@@ -249,6 +249,6 @@ watch(
       error.value = err as Error;
     }
   },
-  { immediate: true },
+  { immediate: true }
 );
 </script>

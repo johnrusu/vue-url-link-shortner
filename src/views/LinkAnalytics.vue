@@ -43,7 +43,7 @@ const linkId = computed(() => route.params.linkId as string);
 const shortUrl = computed(() =>
   link.value
     ? `${window.location.origin}${import.meta.env.BASE_URL}${link.value.shortCode}`
-    : "",
+    : ""
 );
 
 const getLinkDetails = async () => {
@@ -139,7 +139,7 @@ onMounted(() => {
     </div>
 
     <div class="max-w-6xl mx-auto" v-else>
-      <h1 class="text-4xl font-bold text-center mb-8">
+      <h1 class="text-4xl font-bold text-center mb-4">
         {{ LABELS.LINK_ANALYTICS }}
       </h1>
 
@@ -160,7 +160,7 @@ onMounted(() => {
         <div v-else-if="link">
           <v-row>
             <v-col cols="12">
-              <v-card class="mb-4">
+              <v-card class="pa-4">
                 <v-card-title class="d-flex justify-space-between align-center">
                   <span>{{ LABELS.LINK_DETAILS }}</span>
                   <v-btn
@@ -245,84 +245,6 @@ onMounted(() => {
                         <span class="text-h5 text-primary">{{
                           link.clicks
                         }}</span>
-                      </v-list-item-subtitle>
-                    </v-list-item>
-                  </v-list>
-                </v-card-text>
-              </v-card>
-            </v-col>
-          </v-row>
-
-          <v-row>
-            <v-col cols="12" md="6">
-              <v-card>
-                <v-card-title>{{ LABELS.CLICK_STATISTICS }}</v-card-title>
-                <v-card-text>
-                  <div
-                    style="height: 300px"
-                    class="d-flex align-center justify-center"
-                  >
-                    <div class="text-center">
-                      <div class="text-h1 text-primary mb-2">
-                        {{ link.clicks }}
-                      </div>
-                      <div class="text-h6 text-grey">
-                        {{ LABELS.TOTAL_CLICKS }}
-                      </div>
-                    </div>
-                  </div>
-                </v-card-text>
-              </v-card>
-            </v-col>
-
-            <v-col cols="12" md="6">
-              <v-card>
-                <v-card-title>{{ LABELS.QUICK_STATS }}</v-card-title>
-                <v-card-text>
-                  <v-list>
-                    <v-list-item>
-                      <template v-slot:prepend>
-                        <v-icon color="primary">mdi-chart-line</v-icon>
-                      </template>
-                      <v-list-item-title>{{
-                        LABELS.CLICK_THROUGH_RATE
-                      }}</v-list-item-title>
-                      <v-list-item-subtitle>
-                        {{ LABELS.CLICKS_RECORDED(link.clicks) }}
-                      </v-list-item-subtitle>
-                    </v-list-item>
-
-                    <v-list-item>
-                      <template v-slot:prepend>
-                        <v-icon color="success">mdi-calendar-check</v-icon>
-                      </template>
-                      <v-list-item-title>{{
-                        LABELS.DAYS_ACTIVE
-                      }}</v-list-item-title>
-                      <v-list-item-subtitle>
-                        {{
-                          LABELS.DAYS_COUNT(
-                            Math.floor(
-                              (Date.now() -
-                                new Date(link.createdAt).getTime()) /
-                                (1000 * 60 * 60 * 24),
-                            ),
-                          )
-                        }}
-                      </v-list-item-subtitle>
-                    </v-list-item>
-
-                    <v-list-item>
-                      <template v-slot:prepend>
-                        <v-icon color="info">mdi-link-variant</v-icon>
-                      </template>
-                      <v-list-item-title>{{
-                        LABELS.LINK_STATUS
-                      }}</v-list-item-title>
-                      <v-list-item-subtitle>
-                        <v-chip color="success" size="small">{{
-                          LABELS.ACTIVE
-                        }}</v-chip>
                       </v-list-item-subtitle>
                     </v-list-item>
                   </v-list>

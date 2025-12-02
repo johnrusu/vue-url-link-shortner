@@ -26,7 +26,7 @@ const LABELS = {
   CONFIRM: "Confirm",
   CANCEL: "Cancel",
   VIEW_DETAILS: "View Details",
-  LINKS_TABLE_TITLE: "View Links",
+  LINKS_TABLE_TITLE: "Links",
   DELETE_ALL: (links: number) =>
     `Are you sure you want to delete all ${links} links? This action cannot be undone.`,
   ADD_LINK_TITLE: "Add New Link",
@@ -74,7 +74,7 @@ const LABELS = {
   FAILED_CREATE_LINK: "Failed to create link",
   ERROR_CREATING_LINK: "An error occurred while creating the link",
   ABOUT: "About",
-  LINK_ANALYTICS: "Analytics Link",
+  LINK_ANALYTICS: "Analytics",
   FIX_AUTH_ISSUE: "Fix Authentication Issue",
   REMOVE_STORAGE: "Remove Stored Data.",
   RELOGIN: "Please log in again to continue.",
